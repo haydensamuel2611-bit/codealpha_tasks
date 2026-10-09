@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Best Practices -->
+  <title>AURA LUXE — Premium Electronics, Audio & Lifestyle Gear</title>
+  <meta name="description"
+    content="Explore next-generation tech, audiophile headphones, 4K smart projectors, and premium lifestyle accessories with lightning-fast shipping and secure checkout.">
+  <meta name="keywords" content="ecommerce, electronics, smart home, gaming gear, audiophile, CodeAlpha Task 1">
+  <meta name="author" content="CodeAlpha E-Commerce Project">
+
+  <!-- Favicon / Vector Icon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google Fonts & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Instant Modal Helper Stubs for 100% Guaranteed Clicks -->
+  <script>
+    function openTrackingModal(id) {
+      var modal = document.getElementById('order-tracking-modal');
+      if (modal) { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
+      if (window.renderTrackingDetails) window.renderTrackingDetails(id || 'ORD-88582');
+    }
+    function closeTrackingModal() {
+      var modal = document.getElementById('order-tracking-modal');
+      if (modal) { modal.classList.remove('active'); document.body.style.overflow = ''; }
+    }
+    function openShippingModal() {
+      var modal = document.getElementById('shipping-policy-modal');
+      if (modal) { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    }
+    function closeShippingModal() {
+      var modal = document.getElementById('shipping-policy-modal');
+      if (modal) { modal.classList.remove('active'); document.body.style.overflow = ''; }
+    }
+    function openWarrantyModal() {
+      var modal = document.getElementById('warranty-modal');
+      if (modal) { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
+      if (window.lookupWarranty) window.lookupWarranty('AUR-APX-8921');
+    }
+    function closeWarrantyModal() {
+      var modal = document.getElementById('warranty-modal');
+      if (modal) { modal.classList.remove('active'); document.body.style.overflow = ''; }
+    }
+    function openMoneybackModal() {
+      var modal = document.getElementById('moneyback-modal');
+      if (modal) { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    }
+    function closeMoneybackModal() {
+      var modal = document.getElementById('moneyback-modal');
+      if (modal) { modal.classList.remove('active'); document.body.style.overflow = ''; }
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" id="brand-logo-btn">
+        <div class="logo-icon">✦</div>
+        <span>AURA<span class="gradient-text">LUXE</span></span>
+        <span class="brand-badge">PRO</span>
+      </a>
+
+      <!-- Live Backend Connection Pill -->
+      <div class="backend-connection-badge" id="backend-connection-badge" title="Verifying Express API connectivity...">
+        <span class="backend-pulse-dot"></span>
+        <span id="backend-status-text">Connecting...</span>
+      </div>
+
+      <!-- Instant Live Search -->
+      <div class="header-search">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="global-search-input" class="search-input"
+            placeholder="Search premium tech, gadgets, audio..." autocomplete="off">
+          <button class="search-clear-btn" id="search-clear-btn" title="Clear search">✕</button>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <!-- Live Order Tracking Button -->
+        <button class="user-btn" id="header-tracking-btn" onclick="openTrackingModal('ORD-88582')"
+          title="Track Consignment Live in Real-Time"
+          style="background: rgba(6, 182, 212, 0.12); border-color: rgba(6, 182, 212, 0.35); color: #06b6d4; font-weight: 600; padding: 0.5rem 0.9rem; gap: 0.4rem;">
+          <span>⚡</span>
+          <span>Track Order</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="icon-btn" id="theme-toggle-btn" title="Toggle Dark/Light Mode">
+          <span id="theme-icon">🌙</span>
+        </button>
+
+        <!-- Orders Button -->
+        <button class="icon-btn" id="orders-toggle-btn" title="View My Orders">
+          <span>📦</span>
+        </button>
+
+        <!-- User Authentication Button -->
+        <button class="user-btn" id="user-auth-btn">
+          <span id="user-btn-icon">👤</span>
+          <span id="user-btn-text">Sign In</span>
+        </button>
+
+        <!-- Slide-out Cart Button -->
+        <button class="icon-btn cart-btn" id="cart-toggle-btn" title="Open Shopping Cart">
+          <span>🛒</span>
+          <span class="cart-badge-count" id="header-cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-banner">
+        <div class="hero-content">
+          <div class="hero-tag-badge">
+            <span>🔥 CODEALPHA TASK 1</span>
+            <span>•</span>
+            <span>PREMIUM STORE</span>
+          </div>
+          <h1 class="hero-title">
+            Next-Gen Tech &amp; <br>
+            <span class="gradient-text">Lifestyle Masterpieces.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Curated ultra-premium gadgets, audiophile wireless acoustics, and futuristic smart home innovations with
+            zero-compromise engineering.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#catalog-section" class="btn-primary" id="explore-catalog-btn">
+              <span>Explore Collection</span>
+              <span>↓</span>
+            </a>
+            <button class="btn-secondary" id="hero-promo-btn">
+              <span>Use Code <strong>ALPHA10</strong> (10% Off)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-showcase">
+          <div class="hero-product-preview">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80"
+              alt="NovaSound Apex Headphones" class="hero-product-img">
+            <div class="hero-floating-pill">
+              <div>
+                <strong style="font-size: 0.9rem; display: block;">NovaSound Apex ANC</strong>
+                <span style="font-size: 0.75rem; color: #10b981;">★ 4.9 (1.2k+ Reviews)</span>
+              </div>
+              <span class="gradient-text" style="font-weight: 800; font-size: 1.1rem;">₹4,999</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Perks Strip (Interactive: Click to Open Dedicated Portals) -->
+      <div class="features-strip">
+        <div class="perk-card" id="perk-card-shipping" onclick="openShippingModal()" role="button" tabindex="0"
+          title="Click to view Free Express Shipping details & Pincode Checker">
+          <div class="perk-icon-wrap" style="background: rgba(99, 102, 241, 0.15); color: #6366f1;">🚀</div>
+          <div>
+            <div class="perk-title">Free Express Shipping <span class="perk-click-badge">Pincode Check →</span></div>
+            <div class="perk-desc">On all orders over ₹999 across India</div>
+          </div>
+        </div>
+        <div class="perk-card" id="perk-card-warranty" onclick="openWarrantyModal()" role="button" tabindex="0"
+          title="Click to check Warranty status or register your device">
+          <div class="perk-icon-wrap" style="background: rgba(236, 72, 153, 0.15); color: #ec4899;">🛡️</div>
+          <div>
+            <div class="perk-title">2-Year Official Warranty <span class="perk-click-badge">Check / Claim →</span></div>
+            <div class="perk-desc">Comprehensive hardware &amp; accidental protection</div>
+          </div>
+        </div>
+        <div class="perk-card" id="perk-card-moneyback" onclick="openMoneybackModal()" role="button" tabindex="0"
+          title="Click to view 30-Day Money Back policy & initiate return">
+          <div class="perk-icon-wrap" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">🔄</div>
+          <div>
+            <div class="perk-title">30-Day Money Back <span class="perk-click-badge">Instant Refund →</span></div>
+            <div class="perk-desc">100% refund, free doorstep return pickup</div>
+          </div>
+        </div>
+        <div class="perk-card" id="perk-card-tracking" onclick="openTrackingModal('ORD-88582')" role="button"
+          tabindex="0" title="Click to track your order in real-time">
+          <div class="perk-icon-wrap" style="background: rgba(6, 182, 212, 0.15); color: #06b6d4;">⚡</div>
+          <div>
+            <div class="perk-title">Instant Order Tracking <span class="perk-click-badge">Track Live →</span></div>
+            <div class="perk-desc">Real-time GPS delivery status &amp; carrier timeline</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STORE CATALOG SECTION ================= -->
+  <main class="store-section" id="catalog-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Trending <span class="gradient-text">Showcase</span></h2>
+          <p class="section-subtitle">Discover handcrafted hardware with studio acoustics, 4K displays &amp; daily
+            precision.</p>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="category-tabs" id="category-tabs-container">
+        <!-- Dynamically populated categories -->
+      </div>
+
+      <!-- Controls Bar: Search, Price Slider, Sort -->
+      <div class="controls-bar">
+        <div class="controls-left">
+          <span class="results-count-text" id="catalog-results-count">Showing 12 items</span>
+          <div class="price-range-wrapper">
+            <span>Max Price:</span>
+            <input type="range" id="price-range-slider" class="price-slider" min="1000" max="50000" step="500"
+              value="50000">
+            <strong id="price-range-val" class="gradient-text">₹50,000</strong>
+          </div>
+        </div>
+        <div class="controls-right">
+          <label for="sort-select" style="font-size: 0.85rem; color: var(--text-muted);">Sort By:</label>
+          <select id="sort-select" class="filter-select">
+            <option value="featured">Featured Picks</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+            <option value="name">Product Name (A-Z)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="products-grid">
+        <!-- Dynamically rendered via app.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= PRODUCT DETAILS MODAL ================= -->
+  <div class="modal-overlay" id="product-detail-modal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" title="Close Modal">✕</button>
+      <div class="product-modal-grid">
+        <!-- Left Column: Gallery -->
+        <div class="modal-gallery">
+          <div class="main-preview-box">
+            <img id="detail-main-img" src="" alt="Product Detail Preview" class="main-preview-img">
+          </div>
+          <div class="modal-thumbnails" id="detail-thumbnails-container">
+            <!-- Thumbnails -->
+          </div>
+        </div>
+
+        <!-- Right Column: Details & Actions -->
+        <div class="modal-info-col">
+          <div class="card-category" id="detail-category">Tech &amp; Gadgets</div>
+          <h2 class="modal-product-title" id="detail-title">Product Name</h2>
+          <p class="modal-product-tagline" id="detail-tagline">Tagline goes here</p>
+
+          <div class="card-rating-row" style="margin-bottom: 1rem;">
+            <div class="star-rating" id="detail-stars">★★★★★</div>
+            <span class="rating-score" id="detail-rating-num">4.9</span>
+            <span class="rating-count" id="detail-reviews-num">(1,280 verified reviews)</span>
+          </div>
+
+          <div class="modal-price-row">
+            <div class="modal-price" id="detail-price">₹0</div>
+            <div class="modal-orig-price" id="detail-orig-price">₹0</div>
+            <span class="badge-tag badge-sale" id="detail-discount-pill">SAVE 25%</span>
+          </div>
+          <div style="font-size: 0.8rem; color: #10b981; font-weight: 600; margin-bottom: 0.75rem;">
+            💳 EMI starting from ₹499/month • Zero Cost EMI available
+          </div>
+
+          <div class="stock-status-pill" id="detail-stock-pill">
+            <span class="stock-dot"></span>
+            <span id="detail-stock-text">In Stock (Ready to dispatch)</span>
+          </div>
+
+          <!-- Color Option Selector -->
+          <div class="selector-group">
+            <label class="selector-label">Select Color Edition:</label>
+            <div class="color-options-picker" id="detail-color-picker">
+              <!-- Dynamically populated colors -->
+            </div>
+          </div>
+
+          <!-- Quantity Picker -->
+          <div class="selector-group">
+            <label class="selector-label">Quantity:</label>
+            <div class="qty-control">
+              <button class="qty-btn" id="detail-qty-minus">-</button>
+              <div class="qty-display" id="detail-qty-display">1</div>
+              <button class="qty-btn" id="detail-qty-plus">+</button>
+            </div>
+          </div>
+
+          <!-- Action CTAs -->
+          <div class="modal-actions-row">
+            <button class="modal-add-cart-btn" id="detail-add-cart-btn">
+              <span>🛒</span>
+              <span>Add to Cart</span>
+            </button>
+            <button class="modal-buy-now-btn" id="detail-buy-now-btn">
+              <span>⚡</span>
+              <span>Buy Now</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabbed Overview, Specs, Reviews -->
+      <div class="modal-tabs-section">
+        <div class="modal-tab-nav">
+          <button class="modal-tab-trigger active" data-tab="tab-features">Key Highlights</button>
+          <button class="modal-tab-trigger" data-tab="tab-specs">Technical Specs</button>
+          <button class="modal-tab-trigger" data-tab="tab-reviews">Customer Reviews</button>
+        </div>
+
+        <div class="tab-pane active" id="tab-features">
+          <ul class="features-list" id="detail-features-list">
+            <!-- Features populated dynamically -->
+          </ul>
+        </div>
+
+        <div class="tab-pane" id="tab-specs">
+          <table class="specs-table">
+            <tbody id="detail-specs-table-body">
+              <!-- Specs populated dynamically -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tab-pane" id="tab-reviews">
+          <div class="reviews-container" id="detail-reviews-list">
+            <!-- Customer reviews -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SLIDE-OUT CART DRAWER ================= -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div class="cart-title">
+        <span>🛍️ Shopping Bag</span>
+        <span class="gradient-text" id="drawer-cart-count">(0)</span>
+      </div>
+      <button class="icon-btn" id="cart-close-btn" title="Close Cart">✕</button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div style="padding: 1rem 1.5rem 0;">
+      <div class="shipping-meter-wrap">
+        <div class="meter-text">
+          <span id="shipping-meter-label">Add ₹999.00 more for Free Express Delivery!</span>
+          <span id="shipping-meter-status">🚚</span>
+        </div>
+        <div class="meter-bar">
+          <div class="meter-fill" id="shipping-meter-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Items Scroll Container -->
+    <div class="cart-items-scroll" id="cart-items-list">
+      <!-- Items dynamically added -->
+    </div>
+
+    <!-- Cart Summary & Checkout -->
+    <div class="cart-footer">
+      <!-- Coupon Box -->
+      <div class="coupon-input-wrap">
+        <input type="text" id="coupon-code-input" class="coupon-input" placeholder="Promo code (e.g. ALPHA10)">
+        <button class="coupon-apply-btn" id="coupon-apply-btn">Apply</button>
+      </div>
+      <div class="coupon-hints">
+        <span class="coupon-chip" data-code="ALPHA10">🎟️ ALPHA10 (-10%)</span>
+        <span class="coupon-chip" data-code="WELCOME20">🔥 WELCOME20 (-20%)</span>
+        <span class="coupon-chip" data-code="FREESHIP">🚀 FREESHIP</span>
+      </div>
+
+      <!-- Pricing Breakdown -->
+      <div class="summary-line">
+        <span>Subtotal</span>
+        <strong id="cart-subtotal">₹0</strong>
+      </div>
+      <div class="summary-line" id="discount-row" style="display: none;">
+        <span style="color: #10b981;">Coupon Discount (<span id="coupon-applied-name">CODE</span>)</span>
+        <strong style="color: #10b981;" id="cart-discount">-₹0</strong>
+      </div>
+      <div class="summary-line">
+        <span>Estimated Shipping</span>
+        <strong id="cart-shipping">₹0</strong>
+      </div>
+      <div class="summary-line">
+        <span>Estimated GST (18%)</span>
+        <strong id="cart-tax">₹0</strong>
+      </div>
+      <div class="summary-line total">
+        <span>Total Due</span>
+        <strong class="gradient-text" id="cart-total" style="font-size: 1.3rem;">₹0</strong>
+      </div>
+
+      <button class="checkout-btn" id="proceed-checkout-btn">
+        <span>Proceed to Secure Checkout</span>
+        <span>→</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ================= CHECKOUT & ORDER PROCESSING WIZARD ================= -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-dialog checkout-modal-dialog">
+      <button class="modal-close-btn" id="checkout-close-btn" title="Cancel Checkout">✕</button>
+
+      <!-- Steps Indicator -->
+      <div class="checkout-steps-bar">
+        <div class="step-indicator active" id="step-tab-1">
+          <span class="step-number">1</span>
+          <span class="step-label">Shipping Details</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-indicator" id="step-tab-2">
+          <span class="step-number">2</span>
+          <span class="step-label">Payment &amp; Review</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-indicator" id="step-tab-3">
+          <span class="step-number">3</span>
+          <span class="step-label">Confirmation</span>
+        </div>
+      </div>
+
+      <div class="checkout-body">
+        <!-- STEP 1: Shipping Address -->
+        <div id="checkout-step-1">
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 1.25rem;">
+            Shipping &amp; Delivery Contact
+          </h3>
+          <form id="shipping-form" class="form-grid">
+            <div class="form-group col-span-2">
+              <label class="form-label" for="ship-name">Full Name *</label>
+              <input type="text" id="ship-name" class="form-control" placeholder="Hayden Samuel" value="Hayden Samuel"
+                required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ship-email">Email Address *</label>
+              <input type="email" id="ship-email" class="form-control" placeholder="hayden@example.com"
+                value="hayden@example.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ship-phone">Phone Number (with WhatsApp Updates) *</label>
+              <input type="tel" id="ship-phone" class="form-control" placeholder="+91 98450 12345"
+                value="+91 98450 12345" required>
+            </div>
+            <div class="form-group col-span-2">
+              <label class="form-label" for="ship-address">Street Address / Flat No. *</label>
+              <input type="text" id="ship-address" class="form-control" placeholder="42 Richmond Road, Indiranagar"
+                value="42 Richmond Road, Indiranagar" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ship-city">City *</label>
+              <input type="text" id="ship-city" class="form-control" placeholder="Bengaluru" value="Bengaluru" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ship-postal">PIN Code (6 Digits) *</label>
+              <input type="text" id="ship-postal" class="form-control" placeholder="560001" value="560001" maxlength="6"
+                required>
+            </div>
+          </form>
+          <div style="display: flex; justify-content: flex-end; margin-top: 1.75rem;">
+            <button class="btn-primary" id="goto-payment-btn">
+              <span>Continue to Payment</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Payment Method & Review -->
+        <div id="checkout-step-2" style="display: none;">
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 1.25rem;">
+            Select Payment Method
+          </h3>
+
+          <div class="payment-methods-grid">
+            <div class="payment-method-card active" data-method="UPI (Google Pay / PhonePe)">
+              <div class="payment-icon">📱</div>
+              <div class="payment-title">Instant UPI / QR Code</div>
+            </div>
+            <div class="payment-method-card" data-method="Credit / Debit Card">
+              <div class="payment-icon">💳</div>
+              <div class="payment-title">Cards / RuPay / Visa</div>
+            </div>
+            <div class="payment-method-card" data-method="Net Banking / EMI">
+              <div class="payment-icon">🏦</div>
+              <div class="payment-title">NetBanking &amp; EMI</div>
+            </div>
+            <div class="payment-method-card" data-method="Cash on Delivery">
+              <div class="payment-icon">💵</div>
+              <div class="payment-title">Cash on Delivery</div>
+            </div>
+          </div>
+
+          <!-- Card Form Simulation -->
+          <div id="card-payment-form" style="display: none;">
+            <div class="credit-card-preview">
+              <div class="card-chip"></div>
+              <div class="card-num-display" id="card-num-preview">•••• •••• •••• 4242</div>
+              <div class="card-footer-info">
+                <div>
+                  <div style="font-size: 0.65rem;">Card Holder</div>
+                  <strong id="card-name-preview">HAYDEN SAMUEL</strong>
+                </div>
+                <div>
+                  <div style="font-size: 0.65rem;">Expires</div>
+                  <strong id="card-exp-preview">12/28</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group col-span-2">
+                <label class="form-label">Card Number</label>
+                <input type="text" id="card-num-input" class="form-control" placeholder="4242 •••• •••• 4242"
+                  value="4242 8890 1234 5678">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Expiration Date</label>
+                <input type="text" id="card-exp-input" class="form-control" placeholder="MM/YY" value="12/28">
+              </div>
+              <div class="form-group">
+                <label class="form-label">CVV / Security Code</label>
+                <input type="password" id="card-cvv-input" class="form-control" placeholder="123" value="789">
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Summary Pill -->
+          <div
+            style="margin-top: 1.5rem; padding: 1.25rem; border-radius: var(--radius-md); background: var(--bg-card); border: 1px solid var(--border-subtle);">
+            <div style="display: flex; justify-content: space-between; font-weight: 700;">
+              <span>Total Amount to Pay:</span>
+              <span class="gradient-text" id="checkout-final-total" style="font-size: 1.3rem;">₹0</span>
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.35rem;">
+              🔒 256-Bit SSL Encrypted &amp; Authorized Gateway (RBI Compliant)
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; margin-top: 1.75rem;">
+            <button class="btn-secondary" id="back-to-shipping-btn">← Back</button>
+            <button class="btn-primary" id="place-order-btn">
+              <span>⚡ Place Order &amp; Pay</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Order Confirmation Celebration -->
+        <div id="checkout-step-3" style="display: none;">
+          <div class="order-success-box">
+            <div class="success-badge-icon">✓</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;">
+              Order Confirmed!
+            </h3>
+            <p style="color: var(--text-muted);">Thank you for shopping with AURA LUXE. Your shipment has been scheduled
+              for priority dispatch.</p>
+
+            <div class="order-id-chip" id="confirmed-order-id">#ORD-00000</div>
+
+            <!-- Tracking Timeline -->
+            <div class="tracking-timeline">
+              <div class="timeline-step done">
+                <div class="timeline-dot">✓</div>
+                <div class="timeline-label">Order Placed</div>
+              </div>
+              <div class="timeline-step done">
+                <div class="timeline-dot">✓</div>
+                <div class="timeline-label">Payment Done</div>
+              </div>
+              <div class="timeline-step">
+                <div class="timeline-dot">3</div>
+                <div class="timeline-label">Quality Check</div>
+              </div>
+              <div class="timeline-step">
+                <div class="timeline-dot">4</div>
+                <div class="timeline-label">Air Dispatch</div>
+              </div>
+              <div class="timeline-step">
+                <div class="timeline-dot">5</div>
+                <div class="timeline-label">Delivered</div>
+              </div>
+            </div>
+
+            <!-- Receipt Breakdown -->
+            <div
+              style="text-align: left; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.5rem;">
+              <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Delivery Summary</h4>
+              <div id="confirmed-receipt-details"
+                style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                <!-- Filled dynamically -->
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <button class="btn-primary" id="track-confirmed-order-btn"
+                style="background: linear-gradient(135deg, #06b6d4, #6366f1);">⚡ Track Consignment Live</button>
+              <button class="btn-secondary" id="view-orders-btn">View My Orders 📦</button>
+              <button class="btn-secondary" id="finish-shopping-btn">Continue Shopping</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MY ORDERS MODAL ================= -->
+  <div class="modal-overlay" id="orders-history-modal">
+    <div class="modal-dialog" style="max-width: 760px;">
+      <button class="modal-close-btn" id="orders-close-btn" title="Close Orders">✕</button>
+      <div style="padding: 2.5rem 2rem;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;">
+          📦 My Order History
+        </h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          Track your shipments, view receipts, and monitor delivery status.
+        </p>
+
+        <div id="orders-history-list"
+          style="display: flex; flex-direction: column; gap: 1rem; max-height: 60vh; overflow-y: auto;">
+          <!-- Dynamically populated orders -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= AUTH MODAL (LOGIN / REGISTER) ================= -->
+  <div class="modal-overlay" id="auth-modal">
+    <div class="modal-dialog auth-dialog">
+      <button class="modal-close-btn" id="auth-close-btn" title="Close Auth">✕</button>
+
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" id="tab-login-btn">Sign In</button>
+        <button class="auth-tab-btn" id="tab-register-btn">Create Account</button>
+      </div>
+
+      <!-- Sign In Form -->
+      <form id="login-form">
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" for="login-email">Email Address</label>
+          <input type="email" id="login-email" class="form-control" placeholder="alex@example.com" required
+            autocomplete="email">
+        </div>
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label class="form-label" for="login-password">Password</label>
+          <input type="password" id="login-password" class="form-control" placeholder="••••••••" required
+            autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn-primary"
+          style="width: 100%; border-radius: var(--radius-sm); padding: 0.85rem;">
+          Sign In to Account
+        </button>
+      </form>
+
+      <!-- Register Form -->
+      <form id="register-form" style="display: none;">
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" for="reg-name">Full Name</label>
+          <input type="text" id="reg-name" class="form-control" placeholder="Alex Rivera" required autocomplete="name">
+        </div>
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" for="reg-email">Email Address</label>
+          <input type="email" id="reg-email" class="form-control" placeholder="alex@example.com" required
+            autocomplete="email">
+        </div>
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label class="form-label" for="reg-password">Create Password (min 6 chars)</label>
+          <input type="password" id="reg-password" class="form-control" placeholder="••••••••" required minlength="6"
+            autocomplete="new-password">
+        </div>
+        <button type="submit" class="btn-primary"
+          style="width: 100%; border-radius: var(--radius-sm); padding: 0.85rem;">
+          Create My Account
+        </button>
+      </form>
+
+      <!-- Quick Demo Login Pill -->
+      <div class="demo-account-box">
+        <div>
+          <strong>Demo User:</strong> hayden@example.com
+          <div style="font-size: 0.75rem; color: var(--text-dim);">Password: password123</div>
+        </div>
+        <button type="button" class="demo-fill-btn" id="demo-fill-btn">Auto-Fill &amp; Login</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ORDER TRACKING MODAL ================= -->
+  <div class="modal-overlay" id="order-tracking-modal">
+    <div class="modal-dialog tracking-modal-dialog">
+      <button class="modal-close-btn" id="tracking-modal-close-btn" onclick="closeTrackingModal()"
+        title="Close Tracking">✕</button>
+      <div class="modal-header-banner"
+        style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(99, 102, 241, 0.15)); padding: 1.5rem 2rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-size: 2rem;">⚡</span>
+          <div>
+            <h2 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.2rem;">Live Consignment &amp; Order
+              Tracking</h2>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">Real-time dispatch status, GPS carrier sync &amp;
+              doorstep delivery estimates across India</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 1.75rem 2rem;">
+        <!-- Search Bar -->
+        <div style="display: flex; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+          <div style="position: relative; flex: 1; min-width: 250px;">
+            <input type="text" id="tracking-search-input" class="form-control"
+              placeholder="Enter Order ID (e.g. ORD-88582) or AWB Tracking No." value="ORD-88582">
+          </div>
+          <button class="btn-primary" id="tracking-search-btn" style="padding: 0.75rem 1.5rem;">
+            <span>Track Order</span>
+          </button>
+        </div>
+
+        <!-- Quick sample chips -->
+        <div
+          style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.25rem; font-size: 0.78rem; color: var(--text-muted);">
+          <span>Quick Demo Orders:</span>
+          <button type="button" class="tracking-sample-chip" data-order-id="ORD-88582">ORD-88582 (In Transit -
+            BlueDart)</button>
+          <button type="button" class="tracking-sample-chip" data-order-id="ORD-84920">ORD-84920 (Delivered -
+            Delhivery)</button>
+          <button type="button" class="tracking-sample-chip" data-order-id="ORD-91024">ORD-91024 (Out for
+            Delivery)</button>
+        </div>
+
+        <!-- Tracking Results Container -->
+        <div id="tracking-result-box">
+          <!-- Dynamically filled by app.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FREE EXPRESS SHIPPING MODAL ================= -->
+  <div class="modal-overlay" id="shipping-policy-modal">
+    <div class="modal-dialog shipping-modal-dialog">
+      <button class="modal-close-btn" id="shipping-modal-close-btn" onclick="closeShippingModal()"
+        title="Close Free Express Shipping">✕</button>
+      <div class="modal-header-banner"
+        style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(168, 85, 247, 0.15)); padding: 1.5rem 2rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-size: 2rem;">🚀</span>
+          <div>
+            <h2 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.2rem;">Free Express Shipping &amp;
+              Delivery Portal</h2>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">Pan-India Air Express Delivery • Free on all orders
+              above ₹999 • 27,000+ PIN Codes Covered</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 1.75rem 2rem;">
+        <!-- Pincode Estimator Card -->
+        <div
+          style="background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.5rem;">
+          <h3
+            style="font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>📍</span> Check Delivery Time &amp; COD for Your PIN Code
+          </h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.85rem;">
+            Enter your 6-digit Indian postal code to check live courier availability and speed.
+          </p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <input type="text" id="pincode-input" class="form-control" placeholder="e.g. 560001, 110001, 400001"
+              maxlength="6" style="flex: 1; min-width: 200px;">
+            <button class="btn-primary" id="pincode-check-btn" style="padding: 0.75rem 1.5rem;">Check PIN Code</button>
+          </div>
+          <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.75rem; align-items: center;">
+            <span style="font-size: 0.75rem; color: var(--text-dim); margin-right: 2px;">Popular Cities:</span>
+            <button type="button" class="pincode-quick-btn" data-pin="560001">Bengaluru (560001)</button>
+            <button type="button" class="pincode-quick-btn" data-pin="110001">Delhi (110001)</button>
+            <button type="button" class="pincode-quick-btn" data-pin="400001">Mumbai (400001)</button>
+            <button type="button" class="pincode-quick-btn" data-pin="600001">Chennai (600001)</button>
+            <button type="button" class="pincode-quick-btn" data-pin="500001">Hyderabad (500001)</button>
+          </div>
+          <div id="pincode-result-alert" style="margin-top: 1rem; display: none;"></div>
+        </div>
+
+        <!-- Shipping Policy Tiers Grid -->
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+          <div
+            style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+            <div style="font-size: 1.5rem; margin-bottom: 0.4rem;">⚡</div>
+            <h4 style="font-weight: 700; margin-bottom: 0.2rem;">Air Express Priority</h4>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.5rem;">1-2 Business Days</p>
+            <div style="font-size: 1.15rem; font-weight: 800; color: #10b981; margin-bottom: 0.4rem;">FREE on orders
+              &gt; ₹999</div>
+            <div style="font-size: 0.75rem; color: var(--text-dim);">Flat ₹99 for orders below ₹999. Partnered with
+              BlueDart Aviation &amp; Delhivery Air.</div>
+          </div>
+
+          <div
+            style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+            <div style="font-size: 1.5rem; margin-bottom: 0.4rem;">🛡️</div>
+            <h4 style="font-weight: 700; margin-bottom: 0.2rem;">100% Insured Transit</h4>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.5rem;">Zero Risk Guarantee</p>
+            <div style="font-size: 1.15rem; font-weight: 800; color: var(--primary); margin-bottom: 0.4rem;">Included
+              Free</div>
+            <div style="font-size: 0.75rem; color: var(--text-dim);">Tamper-evident holographic security seal and
+              immediate replacement if transit damaged.</div>
+          </div>
+
+          <div
+            style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+            <div style="font-size: 1.5rem; margin-bottom: 0.4rem;">⏱️</div>
+            <h4 style="font-weight: 700; margin-bottom: 0.2rem;">Same-Day Dispatch</h4>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.5rem;">Orders before 2:00 PM IST
+            </p>
+            <div style="font-size: 1.15rem; font-weight: 800; color: var(--accent-pink); margin-bottom: 0.4rem;">Mon -
+              Sat</div>
+            <div style="font-size: 0.75rem; color: var(--text-dim);">Dispatched directly from our climate-controlled
+              fulfillment hub in Bengaluru.</div>
+          </div>
+        </div>
+
+        <!-- Authorized Carrier Partners -->
+        <div
+          style="background: var(--bg-surface); border-radius: var(--radius-md); padding: 1rem 1.25rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; border: 1px solid var(--border-subtle);">
+          <div style="font-size: 0.85rem; font-weight: 600;">Authorized Indian Logistics Partners:</div>
+          <div
+            style="display: flex; gap: 1rem; align-items: center; font-size: 0.82rem; color: var(--text-muted); flex-wrap: wrap;">
+            <span>✈️ BlueDart Express</span>
+            <span>🚚 Delhivery Superfast</span>
+            <span>📦 Ekart Logistics</span>
+            <span>⚡ DTDC Air</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= WARRANTY PORTAL MODAL ================= -->
+  <div class="modal-overlay" id="warranty-modal">
+    <div class="modal-dialog warranty-modal-dialog">
+      <button class="modal-close-btn" id="warranty-modal-close-btn" onclick="closeWarrantyModal()"
+        title="Close Warranty Portal">✕</button>
+      <div class="modal-header-banner"
+        style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(139, 92, 246, 0.15)); padding: 1.5rem 2rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-size: 2rem;">🛡️</span>
+          <div>
+            <h2 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.2rem;">Aura Shield™ 2-Year Official
+              Warranty Portal</h2>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">24 Months Comprehensive Hardware Coverage • Free
+              Doorstep Pickup &amp; Replacement Across India</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 1.5rem 2rem;">
+        <!-- Warranty Subtabs -->
+        <div
+          style="display: flex; gap: 0.5rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem; flex-wrap: wrap;">
+          <button type="button" class="btn-secondary active" data-warranty-tab="tab-check"
+            style="padding: 0.5rem 1rem; font-size: 0.82rem;">🔍 Check Warranty</button>
+          <button type="button" class="btn-secondary" data-warranty-tab="tab-register"
+            style="padding: 0.5rem 1rem; font-size: 0.82rem;">📝 Register Device</button>
+          <button type="button" class="btn-secondary" data-warranty-tab="tab-claim"
+            style="padding: 0.5rem 1rem; font-size: 0.82rem;">🛠️ Doorstep Claim / Repair</button>
+        </div>
+
+        <!-- Tab 1: Check Warranty Status -->
+        <div class="warranty-pane" id="warranty-tab-check">
+          <div style="margin-bottom: 1rem;">
+            <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.4rem;">Enter Device
+              Serial Number or Order ID:</label>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <input type="text" id="warranty-serial-input" class="form-control"
+                placeholder="e.g. AUR-APX-8921 or ORD-88582" value="AUR-APX-8921" style="flex: 1; min-width: 220px;">
+              <button class="btn-primary" id="warranty-lookup-btn" style="padding: 0.75rem 1.5rem;">Verify
+                Warranty</button>
+            </div>
+            <div
+              style="display: flex; gap: 0.5rem; margin-top: 0.5rem; font-size: 0.78rem; color: var(--text-dim); align-items: center; flex-wrap: wrap;">
+              <span>Sample Serials:</span>
+              <button type="button" class="warranty-chip" data-serial="AUR-APX-8921">AUR-APX-8921 (Headphones)</button>
+              <button type="button" class="warranty-chip" data-serial="AUR-CYB-4091">AUR-CYB-4091 (4K
+                Projector)</button>
+              <button type="button" class="warranty-chip" data-serial="AUR-CHR-7714">AUR-CHR-7714 (Smartwatch)</button>
+            </div>
+          </div>
+
+          <div id="warranty-lookup-result">
+            <!-- Dynamic warranty card -->
+          </div>
+        </div>
+
+        <!-- Tab 2: Register Device -->
+        <div class="warranty-pane" id="warranty-tab-register" style="display: none;">
+          <form id="warranty-register-form">
+            <div
+              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+              <div>
+                <label class="form-label">Full Name</label>
+                <input type="text" id="wreg-name" class="form-control" placeholder="Hayden Samuel" value="Hayden Samuel"
+                  required>
+              </div>
+              <div>
+                <label class="form-label">Email Address</label>
+                <input type="email" id="wreg-email" class="form-control" placeholder="hayden@example.com"
+                  value="hayden@example.com" required>
+              </div>
+              <div>
+                <label class="form-label">Product Model</label>
+                <select id="wreg-product" class="form-control" required>
+                  <option value="NovaSound Apex ANC Headphones">NovaSound Apex ANC Headphones</option>
+                  <option value="CyberVision Ultra 4K Cinema Projector">CyberVision Ultra 4K Cinema Projector</option>
+                  <option value="ChronoPulse Quantum Smartwatch 2">ChronoPulse Quantum Smartwatch 2</option>
+                  <option value="Vortex Pro RGB Mechanical Keyboard">Vortex Pro RGB Mechanical Keyboard</option>
+                  <option value="Other Aura Luxe Device">Other Aura Luxe Device</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Order ID / Invoice Number</label>
+                <input type="text" id="wreg-order-id" class="form-control" placeholder="e.g. ORD-88582"
+                  value="ORD-88582" required>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%; padding: 0.85rem;">
+              <span>🛡️ Activate 2-Year Official Shield Warranty &amp; Get Certificate</span>
+            </button>
+          </form>
+          <div id="warranty-cert-preview" style="margin-top: 1rem; display: none;"></div>
+        </div>
+
+        <!-- Tab 3: Doorstep Claim -->
+        <div class="warranty-pane" id="warranty-tab-claim" style="display: none;">
+          <form id="warranty-claim-form">
+            <div
+              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+              <div>
+                <label class="form-label">Serial Number / Registered Order</label>
+                <input type="text" id="wclaim-serial" class="form-control" placeholder="e.g. AUR-APX-8921"
+                  value="AUR-APX-8921" required>
+              </div>
+              <div>
+                <label class="form-label">Issue Category</label>
+                <select id="wclaim-issue" class="form-control" required>
+                  <option value="Acoustic / Driver Sound Distortion">Acoustic / Driver Sound Distortion</option>
+                  <option value="Battery Charging / Drain Issue">Battery Charging / Drain Issue</option>
+                  <option value="Bluetooth / Wireless Connectivity">Bluetooth / Wireless Connectivity</option>
+                  <option value="Hardware Button / Physical Defect">Hardware Button / Physical Defect</option>
+                  <option value="Display / Optics Glitch">Display / Optics Glitch</option>
+                </select>
+              </div>
+              <div style="grid-column: 1 / -1;">
+                <label class="form-label">Doorstep Pickup Address &amp; PIN Code (Across India)</label>
+                <input type="text" id="wclaim-address" class="form-control" placeholder="Address for courier pickup"
+                  value="42 Richmond Road, Indiranagar, Bengaluru - 560001" required>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%; padding: 0.85rem;">
+              <span>🚀 Schedule Free Reverse Doorstep Pickup (Claim Repair)</span>
+            </button>
+          </form>
+          <div id="warranty-claim-result" style="margin-top: 1rem; display: none;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 30-DAY MONEY BACK MODAL ================= -->
+  <div class="modal-overlay" id="moneyback-modal">
+    <div class="modal-dialog moneyback-modal-dialog">
+      <button class="modal-close-btn" id="moneyback-modal-close-btn" onclick="closeMoneybackModal()"
+        title="Close Money Back Guarantee">✕</button>
+      <div class="modal-header-banner"
+        style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(6, 182, 212, 0.15)); padding: 1.5rem 2rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-size: 2rem;">🔄</span>
+          <div>
+            <h2 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.2rem;">30-Day No-Questions-Asked Money
+              Back Guarantee</h2>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">Experience risk-free for 30 full days • 100%
+              Instant Refund to UPI / Bank • Free Doorstep Return Pickup</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 1.5rem 2rem;">
+        <div
+          style="display: flex; gap: 0.5rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem; flex-wrap: wrap;">
+          <button type="button" class="btn-secondary active" data-mb-tab="mb-return"
+            style="padding: 0.5rem 1rem; font-size: 0.82rem;">💸 Request Instant Refund</button>
+          <button type="button" class="btn-secondary" data-mb-tab="mb-policy"
+            style="padding: 0.5rem 1rem; font-size: 0.82rem;">📜 30-Day Policy Terms</button>
+        </div>
+
+        <!-- Tab 1: Request Return -->
+        <div class="moneyback-pane" id="mb-tab-return">
+          <form id="moneyback-form">
+            <div
+              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+              <div>
+                <label class="form-label">Order ID</label>
+                <input type="text" id="mb-order-id" class="form-control" placeholder="e.g. ORD-88582" value="ORD-88582"
+                  required>
+              </div>
+              <div>
+                <label class="form-label">Item to Return</label>
+                <select id="mb-product-select" class="form-control">
+                  <option value="NovaSound Apex Wireless ANC Headphones" data-price="4999">NovaSound Apex Wireless ANC
+                    Headphones (₹4,999)</option>
+                  <option value="ChronoPulse Quantum Smartwatch 2" data-price="6499">ChronoPulse Quantum Smartwatch 2
+                    (₹6,499)</option>
+                  <option value="CyberVision Ultra 4K Cinema Projector" data-price="34999">CyberVision Ultra 4K Cinema
+                    Projector (₹34,999)</option>
+                  <option value="Horizon 34-Inch UltraWide Curved OLED" data-price="39999">Horizon 34-Inch UltraWide
+                    Curved OLED (₹39,999)</option>
+                  <option value="AuraGlide SkyDrone Pro 4K GPS Drone" data-price="24999">AuraGlide SkyDrone Pro 4K GPS
+                    Drone (₹24,999)</option>
+                  <option value="Vortex Pro RGB Mechanical Gaming Keyboard" data-price="4299">Vortex Pro RGB Mechanical
+                    Gaming Keyboard (₹4,299)</option>
+                  <option value="Aura Ring Horizon 3 Smart Titanium Ring" data-price="11999">Aura Ring Horizon 3 Smart
+                    Titanium Ring (₹11,999)</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Return Reason</label>
+                <select id="mb-reason" class="form-control" required>
+                  <option value="Acoustics / Sound signature didn't match personal preference">Acoustics / Sound
+                    signature didn't match personal preference</option>
+                  <option value="Comfort or size fit preference">Comfort or size fit preference</option>
+                  <option value="Decided to upgrade to a higher tier model">Decided to upgrade to a higher tier model
+                  </option>
+                  <option value="Changed mind / Ordered wrong color variant">Changed mind / Ordered wrong color variant
+                  </option>
+                  <option value="No-questions-asked trial period return">No-questions-asked trial period return</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Refund Destination</label>
+                <select id="mb-refund-method" class="form-control" required>
+                  <option value="Instant UPI (GPay / PhonePe / Paytm) - Within 2 Hours Post Pickup">⚡ Instant UPI (GPay
+                    / PhonePe / Paytm) - Within 2 Hours</option>
+                  <option value="Original Payment Method (Credit/Debit Card) - 2-3 Days">💳 Original Card / Net Banking
+                    (2-3 Business Days)</option>
+                  <option value="Aura Luxe Store Wallet (+ 5% Extra Bonus Cash)">🎁 Aura Luxe Store Wallet (+ 5% Extra
+                    Bonus Cash!)</option>
+                </select>
+              </div>
+              <div style="grid-column: 1 / -1;">
+                <label class="form-label">Doorstep Pickup Address &amp; Contact Number</label>
+                <input type="text" id="mb-pickup-address" class="form-control"
+                  placeholder="Enter pickup address & mobile number for OTP"
+                  value="42 Richmond Road, Indiranagar, Bengaluru - 560001 (Ph: +91 98450 12345)" required>
+              </div>
+            </div>
+
+            <div
+              style="background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+              <div>
+                <div style="font-size: 0.82rem; color: var(--text-muted);">Estimated 100% Refund Amount:</div>
+                <strong class="gradient-text" id="mb-refund-calc" style="font-size: 1.35rem;">₹4,999</strong>
+              </div>
+              <div
+                style="font-size: 0.8rem; color: #10b981; font-weight: 600; display: flex; align-items: center; gap: 0.4rem;">
+                <span>✓ Zero Reverse Pickup Fee</span>
+                <span>✓ 100% Money Back Guaranteed</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; padding: 0.85rem;">
+              <span>🔄 Submit Return Request &amp; Schedule Free Pickup</span>
+            </button>
+          </form>
+
+          <div id="mb-return-result" style="margin-top: 1rem; display: none;"></div>
+        </div>
+
+        <!-- Tab 2: Policy Details -->
+        <div class="moneyback-pane" id="mb-tab-policy" style="display: none;">
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+            <div
+              style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.4rem;">🗓️</div>
+              <h4 style="font-weight: 700; margin-bottom: 0.2rem;">Full 30-Day Window</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Returns accepted up to 30 days from the date of
+                package delivery to your doorstep.</p>
+            </div>
+            <div
+              style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.4rem;">🚚</div>
+              <h4 style="font-weight: 700; margin-bottom: 0.2rem;">Free Reverse Pickup</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Our courier partner arrives at your address with
+                the return label. You don't pay a single rupee.</p>
+            </div>
+            <div
+              style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.4rem;">⚡</div>
+              <h4 style="font-weight: 700; margin-bottom: 0.2rem;">Instant UPI Refund</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Once the courier partner scans the box, your full
+                refund is credited to your UPI within 2 hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= TOAST NOTIFICATIONS ================= -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon">✦</div>
+            <span>AURA<span class="gradient-text">LUXE</span></span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 320px; margin-bottom: 1.25rem;">
+            Award-winning e-commerce technology crafted with pure HTML, Vanilla CSS, and Express.js REST API.
+          </p>
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim);">
+            CodeAlpha Web Internship — Task 1: Simple E-Commerce Store
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Product Catalog</h4>
+          <ul class="footer-links">
+            <li><a href="#catalog-section" data-cat="Audio & Wearables">Audio &amp; Wearables</a></li>
+            <li><a href="#catalog-section" data-cat="Tech & Gadgets">Tech &amp; Gadgets</a></li>
+            <li><a href="#catalog-section" data-cat="Gaming & Gear">Gaming &amp; Gear</a></li>
+            <li><a href="#catalog-section" data-cat="Smart Home">Smart Home</a></li>
+            <li><a href="#catalog-section" data-cat="Fashion & Apparel">Fashion &amp; Apparel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="footer-orders-link">Track Your Order</a></li>
+            <li><a href="#">Shipping Rates &amp; Policies</a></li>
+            <li><a href="#">Easy Returns &amp; Warranty</a></li>
+            <li><a href="#">Security &amp; Encryption</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Internship Info</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.codealpha.tech" target="_blank" rel="noopener">www.codealpha.tech</a></li>
+            <li><a href="#">Task 1: E-Commerce Store</a></li>
+            <li><a href="#">Frontend: HTML, CSS, JS</a></li>
+            <li><a href="#">Backend: Express.js (Node.js)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 AURA LUXE Commerce. Built for CodeAlpha Task 1.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: var(--text-muted);">Privacy Policy</a>
+          <a href="#" style="color: var(--text-muted);">Terms of Service</a>
+          <a href="#" style="color: var(--text-muted);">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
