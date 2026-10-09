@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulse — Next-Gen Social Connection (Reels & Memes)</title>
+  <meta name="description"
+    content="Experience Pulse: a sleek, ultra-fast social platform featuring dynamic video reels, dev memes, stories, rich profiles, and instant networking.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body class="not-logged-in">
+
+  <!-- Ambient Dynamic Glowing Background Orbs -->
+  <div class="ambient-orb ambient-orb-1" aria-hidden="true"></div>
+  <div class="ambient-orb ambient-orb-2" aria-hidden="true"></div>
+  <div class="ambient-orb ambient-orb-3" aria-hidden="true"></div>
+
+  <!-- =============================================================
+       PAGE 1: DEDICATED COLOURFUL LOGIN & WELCOME SCREEN
+  ============================================================= -->
+  <div class="login-screen-overlay" id="loginScreenOverlay">
+    <div class="login-wrapper">
+
+      <!-- Hero Header -->
+      <header class="login-hero-header">
+        <div class="login-brand-badge">
+          <span class="live-dot-pulse"></span>
+          <span>Pulse v3.0 &bull; Live Social Network</span>
+        </div>
+
+        <div class="login-brand-row">
+          <div class="login-logo-glow">
+            <img src="images/logo.jpg" alt="Pulse Logo" class="login-logo-img">
+          </div>
+          <h1 class="login-brand-title">Pulse</h1>
+        </div>
+
+        <p class="login-hero-subtitle">
+          Step into the next generation of social media. Watch trending 4K video reels, share tech &amp; dev memes, and connect with creative minds across the globe.
+        </p>
+
+        <div class="login-feature-pills">
+          <button type="button" class="feature-pill pill-reels" id="pillEnterReels" title="Click to view 4K Video Reels">
+            <span>🎬 4K Video Reels</span>
+            <span class="pill-arrow">&rarr;</span>
+          </button>
+          <button type="button" class="feature-pill pill-memes" id="pillEnterMemes" title="Click to view Dev &amp; Tech Memes">
+            <span>🎭 Dev &amp; Tech Memes</span>
+            <span class="pill-arrow">&rarr;</span>
+          </button>
+          <button type="button" class="feature-pill pill-audio" id="pillEnterAudio" title="Click to view Synthwave Audio Reels">
+            <span>🎧 Synthwave Audio</span>
+            <span class="pill-arrow">&rarr;</span>
+          </button>
+          <button type="button" class="feature-pill pill-hearts" id="pillEnterHearts" title="Click to view Double-Tap Hearts &amp; Trending">
+            <span>💖 Double-Tap Hearts</span>
+            <span class="pill-arrow">&rarr;</span>
+          </button>
+          <button type="button" class="feature-pill pill-sync" id="pillEnterSync" title="Click to enter Home Feed with Fast SQLite Sync">
+            <span>⚡ SQLite WAL Fast Sync</span>
+            <span class="pill-arrow">&rarr;</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Login Glass Card -->
+      <section class="login-card-container" aria-label="Sign In or Create Account">
+
+        <!-- Auth Tabs Navigation -->
+        <div class="login-tabs-nav" role="tablist">
+          <button class="login-tab-btn active" id="tabBtnSignIn" data-login-tab="signin" role="tab" aria-selected="true">
+            <span>🔑 Log In</span>
+          </button>
+          <button class="login-tab-btn" id="tabBtnSignUp" data-login-tab="signup" role="tab" aria-selected="false">
+            <span>✨ Create Account</span>
+          </button>
+        </div>
+
+        <!-- Tab 1: Log In -->
+        <div class="login-tab-panel active" id="tabPanelSignIn" role="tabpanel">
+          <form class="login-form" id="memberLoginForm">
+            <div class="form-group-login">
+              <label class="form-label-login" for="loginUsernameInput">Username or Handle</label>
+              <div class="input-with-icon">
+                <span class="input-prefix-icon">@</span>
+                <input type="text" class="input-login" id="loginUsernameInput" placeholder="Enter your username (e.g. elena_ux or marcus_dev)" required autocomplete="username">
+              </div>
+            </div>
+
+            <div class="form-group-login">
+              <label class="form-label-login" for="loginPasswordInput">Password</label>
+              <div class="input-with-icon">
+                <span class="input-prefix-icon">🔒</span>
+                <input type="password" class="input-login" id="loginPasswordInput" placeholder="Enter your password" autocomplete="current-password">
+                <button type="button" class="btn-toggle-password" id="btnToggleLoginPassword" title="Show or hide password">👁️</button>
+              </div>
+            </div>
+
+            <div class="login-form-options">
+              <label class="remember-me-checkbox">
+                <input type="checkbox" id="loginRememberMe" checked>
+                <span>Remember me on this browser</span>
+              </label>
+              <span style="font-size: 0.82rem; color: var(--accent-emerald); font-weight: 700;">✓ SQLite Connected</span>
+            </div>
+
+            <button type="submit" class="btn-login-submit" id="btnMemberLoginSubmit">
+              <span>Log In to Pulse</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Tab 3: Create New Account -->
+        <div class="login-tab-panel" id="tabPanelSignUp" role="tabpanel">
+          <form class="login-form" id="signupForm">
+            <div class="form-row-dual">
+              <div class="form-group-login">
+                <label class="form-label-login" for="signupUsernameInput">Handle (@username)</label>
+                <div class="input-with-icon">
+                  <span class="input-prefix-icon">@</span>
+                  <input type="text" class="input-login" id="signupUsernameInput" placeholder="cyber_coder" required pattern="[a-zA-Z0-9_]{3,20}">
+                </div>
+              </div>
+
+              <div class="form-group-login">
+                <label class="form-label-login" for="signupDisplayNameInput">Display Name</label>
+                <div class="input-with-icon">
+                  <span class="input-prefix-icon">👤</span>
+                  <input type="text" class="input-login" id="signupDisplayNameInput" placeholder="Nova Vance ✨" required maxlength="50">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group-login">
+              <label class="form-label-login" for="signupBioInput">Bio &amp; Passions</label>
+              <textarea class="textarea-login" id="signupBioInput" rows="2" placeholder="Fullstack explorer, reel creator, and coffee enthusiast ☕⚡"></textarea>
+            </div>
+
+            <div class="form-row-dual">
+              <div class="form-group-login">
+                <label class="form-label-login" for="signupLocationInput">Location</label>
+                <div class="input-with-icon">
+                  <span class="input-prefix-icon">📍</span>
+                  <input type="text" class="input-login" id="signupLocationInput" placeholder="Tokyo, Japan / Remote">
+                </div>
+              </div>
+
+              <div class="form-group-login">
+                <label class="form-label-login">Pick an Avatar</label>
+                <div class="preset-avatar-picker" id="presetAvatarPicker">
+                  <div class="preset-avatar-item selected" data-avatar="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80" alt="Avatar Option 1">
+                  </div>
+                  <div class="preset-avatar-item" data-avatar="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80" alt="Avatar Option 2">
+                  </div>
+                  <div class="preset-avatar-item" data-avatar="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&auto=format&fit=crop&q=80">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&auto=format&fit=crop&q=80" alt="Avatar Option 3">
+                  </div>
+                  <div class="preset-avatar-item" data-avatar="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80" alt="Avatar Option 4">
+                  </div>
+                  <div class="preset-avatar-item" data-avatar="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80" alt="Avatar Option 5">
+                  </div>
+                  <div class="preset-avatar-item" data-avatar="https://api.dicebear.com/7.x/bottts/svg?seed=pulse">
+                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=pulse" alt="Cyber Bot">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <input type="hidden" id="signupAvatarInput" value="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80">
+
+            <button type="submit" class="btn-login-submit" id="btnSignupSubmit">
+              <span>Create Account &amp; Launch Pulse</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+      </section>
+
+      <!-- Live Preview Banner & Stats -->
+      <footer class="login-preview-banner">
+        <img src="images/pulse_welcome_hero.jpg" alt="Pulse Preview Hero" class="login-preview-img">
+        <div class="login-preview-overlay">
+          <div class="login-preview-stat">
+            <span class="stat-number">32+</span>
+            <span class="stat-desc">Posts &amp; Reels</span>
+          </div>
+          <div class="login-preview-divider"></div>
+          <div class="login-preview-stat">
+            <span class="stat-number">6</span>
+            <span class="stat-desc">Pro Creators</span>
+          </div>
+          <div class="login-preview-divider"></div>
+          <div class="login-preview-stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-desc">Zero Latency WAL</span>
+          </div>
+          <div class="login-preview-divider"></div>
+          <div class="login-preview-stat">
+            <span class="stat-number">💖</span>
+            <span class="stat-desc">Double-Tap Likes</span>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- Mobile Top Header -->
+  <header class="mobile-header-top" id="mobileHeader">
+    <div class="brand-section" style="padding: 0; border: none;" id="mobileBrandBtn">
+      <div class="brand-logo-container" style="width: 34px; height: 34px;">
+        <img src="images/logo.jpg" alt="Pulse Logo" class="brand-logo-img">
+      </div>
+      <span class="brand-name" style="font-size: 1.15rem;">Pulse</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <button class="mobile-logout-btn" id="btnMobileLogout" title="Log out of Pulse" aria-label="Log Out">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+      </button>
+      <div class="avatar-wrapper" style="width: 34px; height: 34px; cursor: pointer;" id="mobileUserBtn">
+        <img src="" alt="Avatar" class="user-avatar" id="mobileHeaderAvatar">
+      </div>
+    </div>
+  </header>
+
+  <!-- App Main Shell -->
+  <div class="app-container" id="appContainer">
+    <div class="app-layout">
+
+      <!-- ==============================================
+           LEFT COLUMN: Navigation & User Switcher
+      =============================================== -->
+      <aside class="sidebar-left" id="sidebarLeft">
+        <div class="sidebar-left-top">
+          <!-- Brand / Logo -->
+          <div class="brand-section" id="brandLogoBtn" title="Go to Home Feed">
+            <div class="brand-logo-container">
+              <img src="images/logo.jpg" alt="Pulse Logo" class="brand-logo-img">
+            </div>
+            <div style="display: flex; flex-direction: column;">
+              <span class="brand-name">Pulse <span class="brand-tag">v3.0</span></span>
+            </div>
+          </div>
+
+          <!-- Navigation Links -->
+          <nav class="nav-menu" aria-label="Main Navigation">
+            <a href="#feed" class="nav-item active" id="navHome">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Home Feed</span>
+            </a>
+            <a href="#reels" class="nav-item" id="navReels">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                <line x1="7" y1="2" x2="7" y2="22"></line>
+                <line x1="17" y1="2" x2="17" y2="22"></line>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <line x1="2" y1="7" x2="7" y2="7"></line>
+                <line x1="2" y1="17" x2="7" y2="17"></line>
+                <line x1="17" y1="17" x2="22" y2="17"></line>
+                <line x1="17" y1="7" x2="22" y2="7"></line>
+              </svg>
+              <span>🎬 Reels</span>
+              <span class="nav-badge-pill">Hot</span>
+            </a>
+            <a href="#memes" class="nav-item" id="navMemes">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+              </svg>
+              <span>🎭 Memes</span>
+            </a>
+            <a href="#explore" class="nav-item" id="navExplore">
+              <svg viewBox="0 0 24 24">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <span>Trending</span>
+            </a>
+            <a href="#profile" class="nav-item" id="navProfile">
+              <svg viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span>My Profile</span>
+            </a>
+            <a href="#bookmarks" class="nav-item" id="navBookmarks">
+              <svg viewBox="0 0 24 24">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span>Bookmarks</span>
+            </a>
+          </nav>
+
+          <!-- Quick Compose CTA -->
+          <button class="btn-compose-nav" id="btnSidebarCompose" aria-label="Create new post">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            <span>Create Post</span>
+          </button>
+        </div>
+
+        <!-- User Account Switcher Card (Bottom Left) -->
+        <div class="user-account-widget">
+          <div class="user-switch-menu" id="userSwitchMenu">
+            <div class="user-switch-title">Switch Account (Test Profiles)</div>
+            <div id="userSwitchList" style="display: flex; flex-direction: column; gap: 4px;"></div>
+            <button class="switch-new-user-btn" id="btnOpenNewUserModal">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+              <span>Create New Profile</span>
+            </button>
+          </div>
+
+          <button class="current-user-card" id="btnToggleUserSwitch" aria-haspopup="true" aria-expanded="false"
+            title="Click to switch profiles">
+            <div class="avatar-wrapper">
+              <img src="" alt="Avatar" class="user-avatar" id="sidebarAvatar">
+              <div class="online-dot"></div>
+            </div>
+            <div class="user-meta-left">
+              <span class="user-display-name" id="sidebarDisplayName">Loading...</span>
+              <span class="user-handle" id="sidebarUsername">@username</span>
+            </div>
+            <svg class="user-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+
+          <!-- Dedicated Sidebar Log Out Button -->
+          <button class="btn-logout-sidebar" id="btnSidebarLogout" title="Sign out of Pulse" aria-label="Log Out">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+            <span>Log Out</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- ==============================================
+           CENTER COLUMN: Main Stream (Feed / Reels / Profile)
+      =============================================== -->
+      <main class="main-feed-column">
+
+        <!-- ================= FEED VIEW ================= -->
+        <section id="feedSection">
+
+          <!-- Instagram-Style Stories Bar -->
+          <div class="stories-container" id="storiesContainer" title="User Stories">
+            <!-- Dynamic Stories loaded by UI -->
+          </div>
+
+          <!-- Sticky Feed Header & Tabs -->
+          <div class="feed-header-sticky">
+            <div class="feed-top-bar">
+              <h1 class="feed-title" id="mainFeedTitle">
+                <span>Feed Stream</span>
+              </h1>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div id="backendStatusPill"
+                  style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.76rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); border: 1px solid rgba(16, 185, 129, 0.3); cursor: pointer;"
+                  title="Click to test backend connection">
+                  <span class="status-dot"
+                    style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent-emerald); box-shadow: 0 0 8px var(--accent-emerald);"></span>
+                  <span id="backendStatusText">Backend Online (SQLite)</span>
+                </div>
+                <span id="feedFilterBadge"
+                  style="display: none; font-size: 0.8rem; background: rgba(99, 102, 241, 0.2); color: var(--primary-light); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer;"
+                  title="Clear filter">
+                  Filtered <span style="font-weight: 800;">&times;</span>
+                </span>
+              </div>
+            </div>
+            <div class="feed-tabs" role="tablist">
+              <button class="feed-tab active" data-feed="for-you" role="tab" aria-selected="true">
+                <span>✨ For You</span>
+              </button>
+              <button class="feed-tab" data-feed="reels" role="tab" aria-selected="false">
+                <span>🎬 Reels</span>
+              </button>
+              <button class="feed-tab" data-feed="memes" role="tab" aria-selected="false">
+                <span>🎭 Memes</span>
+              </button>
+              <button class="feed-tab" data-feed="following" role="tab" aria-selected="false">
+                <span>👥 Following</span>
+              </button>
+              <button class="feed-tab" data-feed="trending" role="tab" aria-selected="false">
+                <span>🔥 Trending</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Post Composer Card -->
+          <section class="composer-card" aria-label="Post Composer" id="postComposer">
+            <div class="composer-top">
+              <img src="" alt="Avatar" class="composer-avatar" id="composerAvatar">
+              <div class="composer-input-area">
+                <textarea class="composer-textarea" id="composerText"
+                  placeholder="Drop a thought, dev meme, or video reel... Double-tap any post to like!" maxlength="500"
+                  rows="2"></textarea>
+
+                <!-- Media Preview -->
+                <div class="composer-media-preview-container" id="composerMediaPreview">
+                  <img src="" alt="Attached media preview" class="composer-media-preview-img" id="composerPreviewImg">
+                  <button class="btn-remove-media" id="btnRemoveMedia" title="Remove attachment">&times;</button>
+                </div>
+
+                <!-- URL Drawer -->
+                <div class="composer-url-input-container" id="composerUrlInputContainer">
+                  <input type="url" class="composer-url-input" id="composerUrlInput"
+                    placeholder="Paste image or MP4 video URL...">
+                  <button class="composer-url-apply-btn" id="btnApplyImageUrl">Attach</button>
+                </div>
+
+                <!-- Quick Tag Suggestion Chips -->
+                <div class="composer-tags-container" id="composerTags">
+                  <span class="composer-tag-chip" data-tag="memes">🎭 #memes</span>
+                  <span class="composer-tag-chip" data-tag="reels">🎬 #reels</span>
+                  <span class="composer-tag-chip" data-tag="coding">💻 #coding</span>
+                  <span class="composer-tag-chip" data-tag="webdev">🌐 #webdev</span>
+                  <span class="composer-tag-chip" data-tag="vibes">🎧 #vibes</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Composer Bottom Toolbar -->
+            <div class="composer-bottom">
+              <div class="composer-tools">
+                <input type="file" id="localImageInput" accept="image/*,video/mp4" style="display: none;">
+                <button class="composer-tool-btn" id="btnUploadImageFile" title="Upload image or MP4 reel">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                  </svg>
+                </button>
+                <button class="composer-tool-btn" id="btnToggleImageUrlDrawer" title="Attach media URL">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                  </svg>
+                </button>
+                <button class="composer-tool-btn" id="btnAttachMemePreset" title="Quick attach dev meme"
+                  style="color: var(--accent-amber);">
+                  <span style="font-size: 15px;">🎭</span>
+                </button>
+                <button class="composer-tool-btn" id="btnAttachReelPreset" title="Quick attach video reel"
+                  style="color: var(--accent-pink);">
+                  <span style="font-size: 15px;">🎬</span>
+                </button>
+                <button class="composer-tool-btn" id="btnInsertEmoji" title="Add reaction emoji">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                    <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                    <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="composer-submit-section">
+                <span class="char-counter" id="charCounter">500</span>
+                <button class="btn-publish" id="btnPublishPost" disabled>
+                  <span>Post</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Posts Feed Stream -->
+          <div class="posts-feed" id="postsFeed"></div>
+        </section>
+
+        <!-- ================= USER PROFILE VIEW ================= -->
+        <section class="profile-view-container" id="profileSection">
+          <div class="profile-nav-bar">
+            <button class="btn-back-nav" id="btnBackToFeed" title="Back to Feed">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <div class="profile-nav-titles">
+              <span class="profile-nav-name" id="profileNavName">User Profile</span>
+              <span class="profile-nav-postcount" id="profileNavPostCount">0 Posts</span>
+            </div>
+          </div>
+
+          <!-- Hero Profile Card -->
+          <article class="profile-card">
+            <div class="profile-banner-container">
+              <img src="" alt="Banner" class="profile-banner-img" id="profileBannerImg">
+              <div class="profile-banner-overlay"></div>
+            </div>
+
+            <div class="profile-avatar-row">
+              <div class="profile-avatar-wrapper">
+                <img src="" alt="Avatar" class="profile-avatar-img" id="profileAvatarImg">
+              </div>
+              <div class="profile-actions-right">
+                <button class="btn-edit-profile" id="btnOpenEditProfileModal" style="display: none;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                  </svg>
+                  <span>Edit Profile</span>
+                </button>
+                <button class="btn-logout-profile" id="btnProfileLogout" style="display: none;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                  </svg>
+                  <span>Log Out</span>
+                </button>
+                <button class="btn-profile-follow btn-follow not-following" id="btnProfileFollowAction"
+                  style="display: none;">
+                  <span>Follow</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="profile-details-body">
+              <div class="profile-name-row">
+                <h2 class="profile-full-name" id="profileDisplayName">User Name</h2>
+                <svg class="verified-badge" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div class="profile-username-tag" id="profileUsername">@username</div>
+              <p class="profile-bio-text" id="profileBioText">Bio description here...</p>
+
+              <div class="profile-meta-chips">
+                <div class="profile-chip-item" id="profileLocationWrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span id="profileLocationText">Location</span>
+                </div>
+                <div class="profile-chip-item" id="profileWebsiteWrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                  </svg>
+                  <a href="#" target="_blank" rel="noopener noreferrer" id="profileWebsiteLink">website.com</a>
+                </div>
+                <div class="profile-chip-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <span id="profileJoinedText">Joined Recently</span>
+                </div>
+              </div>
+
+              <!-- Stats Bar -->
+              <div class="profile-stats-bar">
+                <div class="profile-stat-box">
+                  <span class="profile-stat-num" id="profileStatPosts">0</span>
+                  <span class="profile-stat-label">Posts</span>
+                </div>
+                <div class="profile-stat-box" id="btnOpenFollowersModal" title="View Followers">
+                  <span class="profile-stat-num" id="profileStatFollowers">0</span>
+                  <span class="profile-stat-label">Followers</span>
+                </div>
+                <div class="profile-stat-box" id="btnOpenFollowingModal" title="View Following">
+                  <span class="profile-stat-num" id="profileStatFollowing">0</span>
+                  <span class="profile-stat-label">Following</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Profile Subtabs -->
+          <div class="profile-subtabs">
+            <button class="profile-subtab active" data-subtab="posts">Posts</button>
+            <button class="profile-subtab" data-subtab="liked">Liked</button>
+            <button class="profile-subtab" data-subtab="media">Media &amp; Reels</button>
+          </div>
+
+          <div class="posts-feed" id="profilePostsFeed"></div>
+        </section>
+
+      </main>
+
+      <!-- ==============================================
+           RIGHT COLUMN: Search, Who to Follow, Trends
+      =============================================== -->
+      <aside class="sidebar-right">
+        <!-- Live Search -->
+        <div class="search-widget">
+          <div class="search-input-wrapper">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" class="search-input" id="sidebarSearchInput" placeholder="Search memes, reels, tags..."
+              autocomplete="off">
+            <button class="search-clear-btn" id="btnSearchClear" title="Clear search">&times;</button>
+          </div>
+        </div>
+
+        <!-- Who To Follow Card -->
+        <div class="sidebar-card">
+          <h2 class="sidebar-card-title">
+            <span>✨ Creators to follow</span>
+          </h2>
+          <div class="who-to-follow-list" id="whoToFollowList"></div>
+        </div>
+
+        <!-- Trending Topics Card -->
+        <div class="sidebar-card">
+          <h2 class="sidebar-card-title">
+            <span>🔥 Viral Topics &amp; Memes</span>
+          </h2>
+          <div class="trending-tags-list" id="trendingTagsList"></div>
+        </div>
+
+        <footer style="padding: 10px 14px; font-size: 0.78rem; color: var(--text-muted); line-height: 1.5;">
+          <p>Pulse Social Platform &bull; Vanilla HTML/CSS/JS</p>
+          <p>Reels &bull; Memes &bull; Express.js &bull; SQLite</p>
+        </footer>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="mobile-nav-bottom" aria-label="Mobile Navigation">
+    <button class="mobile-nav-item active" id="mobileNavHome" title="Home Feed">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      </svg>
+    </button>
+    <button class="mobile-nav-item" id="mobileNavReels" title="Video Reels">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+        <line x1="7" y1="2" x2="7" y2="22"></line>
+        <line x1="17" y1="2" x2="17" y2="22"></line>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+      </svg>
+    </button>
+    <button class="mobile-nav-item" id="mobileNavCompose"
+      style="background: var(--gradient-brand); color: #fff; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </button>
+    <button class="mobile-nav-item" id="mobileNavMemes" title="Memes Feed">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+        <line x1="9" y1="9" x2="9.01" y2="9"></line>
+        <line x1="15" y1="9" x2="15.01" y2="9"></line>
+      </svg>
+    </button>
+    <button class="mobile-nav-item" id="mobileNavProfile" title="My Profile">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- ==============================================
+       MODALS
+  =============================================== -->
+
+  <!-- Edit Profile Modal -->
+  <div class="modal-overlay" id="editProfileModal">
+    <div class="modal-content-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Edit Profile</h3>
+        <button class="btn-close-modal" id="btnCloseEditModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form class="edit-profile-form" id="editProfileForm">
+          <div class="form-group">
+            <label class="form-label" for="editDisplayName">Display Name</label>
+            <input type="text" class="form-input" id="editDisplayName" required maxlength="50">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="editBio">Bio</label>
+            <textarea class="form-textarea" id="editBio" maxlength="200"
+              placeholder="A brief intro about yourself..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="editLocation">Location</label>
+            <input type="text" class="form-input" id="editLocation" placeholder="e.g. San Francisco, Tokyo, London"
+              maxlength="40">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="editWebsite">Website</label>
+            <input type="url" class="form-input" id="editWebsite" placeholder="https://yourportfolio.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="editAvatar">Avatar Image URL</label>
+            <input type="url" class="form-input" id="editAvatar" placeholder="https://images.unsplash.com/...">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="editBanner">Banner Image URL</label>
+            <input type="url" class="form-input" id="editBanner" placeholder="https://images.unsplash.com/...">
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn-secondary" id="btnCancelEditModal">Cancel</button>
+            <button type="submit" class="btn-primary-modal">Save Profile</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create New User Modal -->
+  <div class="modal-overlay" id="newUserModal">
+    <div class="modal-content-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Create New Profile</h3>
+        <button class="btn-close-modal" id="btnCloseNewUserModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form class="edit-profile-form" id="newUserForm">
+          <div class="form-group">
+            <label class="form-label" for="newUsername">Username (@handle)</label>
+            <input type="text" class="form-input" id="newUsername" placeholder="e.g. alex_coder" required
+              pattern="[a-zA-Z0-9_]{3,20}">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="newDisplayName">Display Name</label>
+            <input type="text" class="form-input" id="newDisplayName" placeholder="e.g. Alex Rivera" required
+              maxlength="50">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="newBio">Bio</label>
+            <textarea class="form-textarea" id="newBio" placeholder="What describes you?" maxlength="200"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="newLocation">Location</label>
+            <input type="text" class="form-input" id="newLocation" placeholder="e.g. New York, NY">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="newAvatar">Avatar URL (Optional)</label>
+            <input type="url" class="form-input" id="newAvatar" placeholder="Leave empty for auto-generated avatar">
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn-secondary" id="btnCancelNewUserModal">Cancel</button>
+            <button type="submit" class="btn-primary-modal">Create Account</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Followers / Following Modal -->
+  <div class="modal-overlay" id="userListModal">
+    <div class="modal-content-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="userListModalTitle">Followers</h3>
+        <button class="btn-close-modal" id="btnCloseUserListModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="user-follow-list-modal" id="userListModalContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Lightbox Modal -->
+  <div class="lightbox-overlay" id="lightboxModal">
+    <button class="lightbox-close-btn" id="btnCloseLightbox">&times;</button>
+    <img src="" alt="Fullscreen preview" class="lightbox-img" id="lightboxImg">
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/seedData.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

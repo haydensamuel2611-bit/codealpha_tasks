@@ -1,0 +1,23 @@
+{
+  "name": "social-pulse",
+  "version": "1.0.0",
+  "description": "Full-stack Social Media Platform with User Profiles, Posts, Comments, Likes, and Follow System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node db/seed.js"
+  },
+  "keywords": ["social-media", "express", "sqlite", "fullstack"],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "multer": "^2.4.0"
+  }
+}
